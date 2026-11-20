@@ -1,0 +1,33 @@
+* { box-sizing: border-box; }
+:root { color-scheme: light; font-family: Arial, Helvetica, sans-serif; color: #17212b; background: #f5f7fa; }
+body { margin: 0; }
+header { background: #123b55; color: white; padding: 20px max(18px, calc((100% - 1180px)/2)); display: flex; justify-content: space-between; align-items: center; gap: 16px; }
+h1 { margin: 0 0 6px; font-size: 24px; }
+header p { margin: 0; color: #d7e6ee; font-size: 14px; }
+.status { font-size: 12px; padding: 7px 10px; border-radius: 20px; background: #e5f5eb; color: #17633a; white-space: nowrap; }
+main { max-width: 1180px; margin: 20px auto; padding: 0 16px; }
+.summary { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 18px; }
+.summary > div, .map-wrap, .list-wrap { background: white; border: 1px solid #e0e6eb; border-radius: 10px; padding: 15px; }
+.label { display: block; color: #647482; font-size: 12px; margin-bottom: 7px; }
+.summary strong { font-size: 18px; }
+.section-heading { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; margin-bottom: 12px; }
+h2 { margin: 0; font-size: 17px; }
+.section-heading span { color: #71808c; font-size: 12px; }
+#map { height: 470px; border-radius: 7px; background: #eaf0f4; }
+.list-wrap { margin-top: 18px; }
+.table-scroll { overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; font-size: 13px; }
+th, td { text-align: left; padding: 11px 9px; border-bottom: 1px solid #edf0f2; vertical-align: top; }
+th { color: #586977; font-weight: 600; background: #f8fafb; }
+td a { color: #12618b; }
+.scene-id { max-width: 270px; overflow-wrap: anywhere; }
+footer { padding: 18px 2px 28px; color: #697985; font-size: 12px; line-height: 1.6; }
+footer a { color: #12618b; }
+.leaflet-popup-content { line-height: 1.5; }
+@media (max-width: 650px) {
+  header { align-items: flex-start; flex-direction: column; }
+  h1 { font-size: 21px; }
+  .summary { grid-template-columns: 1fr; }
+  #map { height: 360px; }
+  .section-heading { align-items: flex-start; flex-direction: column; }
+}

@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>India LISS-4 Latest Scenes</title>
+  <meta name="description" content="Latest available Resourcesat-2 and Resourcesat-2A LISS-4 scene catalogue for India.">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div>
+      <h1>India LISS-4 Explorer</h1>
+      <p>Latest catalogue scenes from Resourcesat-2 and Resourcesat-2A</p>
+    </div>
+    <span id="status" class="status">Loading catalogue…</span>
+  </header>
+
+  <main>
+    <section class="summary">
+      <div><span class="label">Newest acquisition</span><strong id="newest-date">—</strong></div>
+      <div><span class="label">Scenes in catalogue</span><strong id="scene-count">—</strong></div>
+      <div><span class="label">Catalogue checked</span><strong id="updated-at">—</strong></div>
+    </section>
+
+    <section class="map-wrap">
+      <div class="section-heading">
+        <h2>Scene footprints over India</h2>
+        <span>Click a footprint to view scene details</span>
+      </div>
+      <div id="map" aria-label="Map showing LISS-4 scene footprints"></div>
+    </section>
+
+    <section class="list-wrap">
+      <div class="section-heading">
+        <h2>Latest scenes</h2>
+        <span id="list-note">Newest acquisition dates first</span>
+      </div>
+      <div class="table-scroll">
+        <table>
+          <thead><tr><th>Acquisition</th><th>Satellite</th><th>Scene ID</th><th>Collection</th><th>Details</th></tr></thead>
+          <tbody id="scene-rows"><tr><td colspan="5">Waiting for catalogue…</td></tr></tbody>
+        </table>
+      </div>
+    </section>
+
+    <footer>
+      <p>Data catalogue source: NRSC / ISRO Bhoonidhi. This site displays catalogue metadata and scene footprints; it does not host or redistribute original satellite imagery.</p>
+      <p><a href="https://bhoonidhi.nrsc.gov.in/bhoonidhi-api/" target="_blank" rel="noopener">Bhoonidhi API documentation</a> · <a href="https://www.nrsc.gov.in/" target="_blank" rel="noopener">NRSC</a></p>
+    </footer>
+  </main>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
